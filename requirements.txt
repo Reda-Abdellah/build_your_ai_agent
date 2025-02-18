@@ -1,10 +1,11 @@
+pydantic==2.9.2
 langchain==0.3.18
 langgraph==0.2.73
 langchain-ollama==0.2.3
 langchain-community==0.3.17
 duckduckgo-search==7.4.2
+langchain_experimental==0.3.4
 chromadb==0.6.3
 streamlit==1.42.0
 psycopg2-binary==2.9.10
 requests==2.32.3
-pydantic==2.10.6

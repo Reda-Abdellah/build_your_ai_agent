@@ -1,11 +1,11 @@
-from typing_extensions import TypedDict, List, Dict
+# from typing_extensions import TypedDict, List, Dict
 from langgraph.graph import StateGraph, END
 from agent.llm import local_llm  # Import your LLM instance from llm.py
-from langchain_community.tools.ddg_search.tool import DuckDuckGoSearchRun
 import operator
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage, ToolMessage
 from typing import TypedDict, Annotated
 from agent.prompts import prompt
+from agent.tools import get_tools
 
 
 # Define the state schema that your graph will use
@@ -58,6 +58,5 @@ class Agent:
 
 def build_agent():
     # Replace TavilySearchResults with DuckDuckGoSearchRun
-    tool = DuckDuckGoSearchRun(max_results=4)  # Define the DuckDuckGo search tool
-    abot = Agent(local_llm, [tool], system=prompt)
+    abot = Agent(local_llm, get_tools(local_llm), system=prompt)
     return abot
