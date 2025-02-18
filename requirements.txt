@@ -9,3 +9,4 @@ chromadb==0.6.3
 streamlit==1.42.0
 psycopg2-binary==2.9.10
 requests==2.32.3
+google_auth_oauthlib

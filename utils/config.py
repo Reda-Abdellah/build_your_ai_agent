@@ -17,3 +17,8 @@ POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
 POSTGRES_DATABASE = os.getenv("POSTGRES_DATABASE", "testdb")
 POSTGRES_TABLE = os.getenv("POSTGRES_TABLE", "mock_data_table")
+
+
+ENABLE_GMAIL = False
+GMAIL_AUTH_LOCAL_SERVER_IP = 'localhost'
+GMAIL_AUTH_LOCAL_SERVER_PORT = 9999

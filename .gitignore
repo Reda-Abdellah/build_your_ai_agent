@@ -3,3 +3,4 @@ __pycache__/
 .env                # Environment variables file.
 data/chroma/        # ChromaDB storage files.
 agent_env/
+agent/gmail_client_config.json
